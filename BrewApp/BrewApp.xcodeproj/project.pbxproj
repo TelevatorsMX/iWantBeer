@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1ECC5C28217BAD79002DE2E1 /* Beer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ECC5C27217BAD79002DE2E1 /* Beer.swift */; };
 		2F298CFB217B74B2000031E0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F298CFA217B74B2000031E0 /* AppDelegate.swift */; };
 		2F298CFD217B74B2000031E0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F298CFC217B74B2000031E0 /* ViewController.swift */; };
 		2F298D00217B74B2000031E0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F298CFE217B74B2000031E0 /* Main.storyboard */; };
@@ -30,6 +31,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1ECC5C27217BAD79002DE2E1 /* Beer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beer.swift; sourceTree = "<group>"; };
 		2F298CF7217B74B2000031E0 /* BrewApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BrewApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F298CFA217B74B2000031E0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2F298CFC217B74B2000031E0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 				2F298CFA217B74B2000031E0 /* AppDelegate.swift */,
 				2F298CFC217B74B2000031E0 /* ViewController.swift */,
 				2F298CFE217B74B2000031E0 /* Main.storyboard */,
+				1ECC5C27217BAD79002DE2E1 /* Beer.swift */,
 				2FA6C026217BA60B003E43CC /* ProductTableViewCell.swift */,
 				2F298D03217B74B3000031E0 /* LaunchScreen.storyboard */,
 				2F298D06217B74B3000031E0 /* Info.plist */,
@@ -214,6 +217,7 @@
 				2F298CFB217B74B2000031E0 /* AppDelegate.swift in Sources */,
 				2F298D1F217B8352000031E0 /* DataSource.swift in Sources */,
 				2F298D1B217B764D000031E0 /* MenuTableViewController.swift in Sources */,
+				1ECC5C28217BAD79002DE2E1 /* Beer.swift in Sources */,
 				2FA6C027217BA60B003E43CC /* ProductTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

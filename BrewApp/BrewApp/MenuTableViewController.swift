@@ -9,10 +9,13 @@
 import UIKit
 
 class MenuTableViewController: UITableViewController {
+    
+    var beers: [Beer] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.beers = Beer.loadExamples()
+        tableView.reloadData()
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -29,23 +32,24 @@ class MenuTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 3
+        return beers.count
     }
 
-    /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let beer = beers[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: "brewCell", for: indexPath) as! ProductTableViewCell
+        cell.productName.text = beer.name
+        cell.productCountry.text = beer.coutry
 
         // Configure the cell...
 
         return cell
     }
-    */
 
     /*
     // Override to support conditional editing of the table view.
@@ -91,5 +95,9 @@ class MenuTableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return CGFloat(200)
+    }
 
 }
