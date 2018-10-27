@@ -4,6 +4,7 @@
 //
 //  Created by Ricardo_Abraham_Desiderio_Diplomado on 20/10/18.
 //  Copyright © 2018 Miguel Vicario. All rights reserved.
+//  Copyright © 2018 Saul G. All rights reserved.
 //
 
 import Foundation
