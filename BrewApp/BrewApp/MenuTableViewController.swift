@@ -44,7 +44,8 @@ class MenuTableViewController: UITableViewController {
         let beer = beers[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "brewCell", for: indexPath) as! ProductTableViewCell
         cell.productName.text = beer.name
-        cell.productCountry.text = beer.coutry
+        cell.productCountry.text = beer.country
+        cell.imageView?.image = beer.image
 
         // Configure the cell...
 

@@ -7,12 +7,32 @@
 //
 
 import Foundation
+import UIKit
+
+enum Segment {
+    case Ale
+    case Lager
+}
+
+enum Color {
+    case Ambar
+    case Pagise
+}
 
 struct Beer {
     let name: String
-    let coutry: String
+    let country: String
+    let image: UIImage
+    let quantity: String
+    let segment: Segment
+    let color: Color
+    let alcohol: String
     
     static func loadExamples() -> [Beer] {
-        return [Beer(name: "Corona", coutry: "México"), Beer(name: "XX", coutry: "México")]
+        return [
+            Beer(name: "Tijuana Güera", country: "México", image: #imageLiteral(resourceName: "1_TijuanaGuera"), quantity: "355 ml", segment: .Lager, color: .Pagise, alcohol: "4.6 %")
+        ]
     }
+    
+    
 }
