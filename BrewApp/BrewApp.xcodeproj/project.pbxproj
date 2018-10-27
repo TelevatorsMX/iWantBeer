@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E2A60FA2184D79C007D3636 /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2A60F92184D79C007D3636 /* Client.swift */; };
+		1E2A60FD2184D80E007D3636 /* BeerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2A60FC2184D80E007D3636 /* BeerService.swift */; };
 		1ECC5C28217BAD79002DE2E1 /* Beer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ECC5C27217BAD79002DE2E1 /* Beer.swift */; };
 		2F298CFB217B74B2000031E0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F298CFA217B74B2000031E0 /* AppDelegate.swift */; };
 		2F298D00217B74B2000031E0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F298CFE217B74B2000031E0 /* Main.storyboard */; };
@@ -32,6 +34,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1E2A60F92184D79C007D3636 /* Client.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
+		1E2A60FC2184D80E007D3636 /* BeerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerService.swift; sourceTree = "<group>"; };
 		1ECC5C27217BAD79002DE2E1 /* Beer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beer.swift; sourceTree = "<group>"; };
 		2F298CF7217B74B2000031E0 /* BrewApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BrewApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F298CFA217B74B2000031E0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -68,6 +72,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1E2A60FB2184D7A0007D3636 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				1E2A60F92184D79C007D3636 /* Client.swift */,
+				1E2A60FC2184D80E007D3636 /* BeerService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		2F298CEE217B74B2000031E0 = {
 			isa = PBXGroup;
 			children = (
@@ -89,6 +102,7 @@
 		2F298CF9217B74B2000031E0 /* BrewApp */ = {
 			isa = PBXGroup;
 			children = (
+				1E2A60FB2184D7A0007D3636 /* Services */,
 				2F298CFA217B74B2000031E0 /* AppDelegate.swift */,
 				2F298CFE217B74B2000031E0 /* Main.storyboard */,
 				1ECC5C27217BAD79002DE2E1 /* Beer.swift */,
@@ -218,10 +232,12 @@
 			files = (
 				EE13BC782183F689007FB9C5 /* DetailBeerViewController.swift in Sources */,
 				2F298D1D217B7662000031E0 /* OrderTableViewController.swift in Sources */,
+				1E2A60FD2184D80E007D3636 /* BeerService.swift in Sources */,
 				2F298CFB217B74B2000031E0 /* AppDelegate.swift in Sources */,
 				EE13BC7A218416A2007FB9C5 /* LogInViewController.swift in Sources */,
 				2F298D1B217B764D000031E0 /* MenuTableViewController.swift in Sources */,
 				1ECC5C28217BAD79002DE2E1 /* Beer.swift in Sources */,
+				1E2A60FA2184D79C007D3636 /* Client.swift in Sources */,
 				EE13BC762183F52E007FB9C5 /* BeerCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

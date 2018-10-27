@@ -10,6 +10,8 @@
 import Foundation
 import UIKit
 
+/*
+
 enum Segment: CustomStringConvertible {
     
     case Ale
@@ -69,6 +71,28 @@ struct Beer {
             Beer(name: "Tecolote Blonde Ale Mezquite", country: "México 🇲🇽", image: #imageLiteral(resourceName: "9_TecoloteBlondeAleMezquite"), quantity: "355 ml", segment: .Ale, color: .Dorado, alcohol: "4.2%", precio: 53.0)
         ]
     }
+ }
+*/
+
+struct Beer: Codable {
+    let id: Int
+    let name: String
+    let description: String
+    let abv: String?
+    let ibu: String?
+    let isOrganic: Bool
+    let labelURL: String?
     
+    enum CodingKeys: String, CodingKey {
+        case id
+        case name
+        case description
+        case abv
+        case ibu
+        case isOrganic = "organic"
+        case labelURL
+    }
     
 }
+    
+

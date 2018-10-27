@@ -33,13 +33,13 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quantity" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0R0-rQ-57E">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="abv" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0R0-rQ-57E">
                         <rect key="frame" x="166" y="37" width="209" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="orO-ro-37M">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ibu" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="orO-ro-37M">
                         <rect key="frame" x="166" y="66" width="193" height="21"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="21" id="RpZ-Jj-PWV"/>
@@ -67,10 +67,10 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="abvTextLabel" destination="0R0-rQ-57E" id="jYL-aM-xF3"/>
                 <outlet property="beerImage" destination="IbD-ax-Fuk" id="mGE-fR-Lpc"/>
+                <outlet property="ibuTextLabel" destination="orO-ro-37M" id="BPB-fX-gGl"/>
                 <outlet property="nameLabel" destination="JVH-hT-oHo" id="s0u-X6-UqZ"/>
-                <outlet property="priceLabel" destination="orO-ro-37M" id="dmM-gq-ppF"/>
-                <outlet property="quantityLabel" destination="0R0-rQ-57E" id="PPs-jM-yfu"/>
             </connections>
             <point key="canvasLocation" x="61.5" y="132"/>
         </tableViewCell>

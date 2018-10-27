@@ -34,11 +34,11 @@ class DetailBeerViewController: UIViewController {
     }
     
     func updateUI() {
-        detailImage.image = beer.image
-        segmentLabel.text = beer.segment.description
-        colorLabel.text = beer.color.description
-        alcoholLabel.text = beer.alcohol
-        countryLabel.text = beer.country
+        //detailImage.image = beer.image
+        //segmentLabel.text = beer.segment.description
+        //colorLabel.text = beer.color.description
+        //alcoholLabel.text = beer.alcohol
+        //countryLabel.text = beer.country
     }
     
 

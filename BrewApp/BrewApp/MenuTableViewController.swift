@@ -14,8 +14,13 @@ class MenuTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.beers = Beer.loadExamples()
-        tableView.reloadData()
+        ProductsService.shared.getBeers { (beers) in
+            if let beers = beers {
+                self.beers = beers
+                self.tableView.reloadData()
+            }
+        }
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
