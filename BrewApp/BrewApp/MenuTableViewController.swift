@@ -42,14 +42,14 @@ class MenuTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let beer = beers[indexPath.row]
-        let cell = tableView.dequeueReusableCell(withIdentifier: "brewCell", for: indexPath) as! ProductTableViewCell
-        cell.productName.text = beer.name
-        cell.productCountry.text = beer.country
-        cell.imageView?.image = beer.image
-
-        // Configure the cell...
+        let cell = Bundle.main.loadNibNamed("BeerCell", owner: nil, options: nil)![0] as! BeerCell
+        cell.update(with: beer)
 
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "showBeerDetail", sender: self)
     }
 
     /*
@@ -87,15 +87,14 @@ class MenuTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        guard let detailBeerViewController = segue.destination as? DetailBeerViewController, let selectIndexPath = tableView.indexPathForSelectedRow?.row else {return}
+        detailBeerViewController.beer = beers[selectIndexPath]
     }
-    */
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return CGFloat(200)
