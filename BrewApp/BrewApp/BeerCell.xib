@@ -20,7 +20,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="375" height="199.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IbD-ax-Fuk">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="6_TorodeOsborneOldAle" translatesAutoresizingMaskIntoConstraints="NO" id="IbD-ax-Fuk">
                         <rect key="frame" x="9" y="11" width="157" height="178"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="178" id="1dk-FY-vqV"/>
@@ -28,19 +28,19 @@
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JVH-hT-oHo">
-                        <rect key="frame" x="166" y="8" width="209" height="21"/>
+                        <rect key="frame" x="166" y="98" width="209" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="abv" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0R0-rQ-57E">
-                        <rect key="frame" x="166" y="37" width="209" height="21"/>
+                        <rect key="frame" x="166" y="127" width="209" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ibu" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="orO-ro-37M">
-                        <rect key="frame" x="166" y="66" width="193" height="21"/>
+                        <rect key="frame" x="166" y="156" width="193" height="21"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="21" id="RpZ-Jj-PWV"/>
                         </constraints>
@@ -62,7 +62,7 @@
                     <constraint firstItem="0R0-rQ-57E" firstAttribute="top" secondItem="JVH-hT-oHo" secondAttribute="bottom" constant="8" id="p5y-vm-1o6"/>
                     <constraint firstAttribute="bottom" secondItem="IbD-ax-Fuk" secondAttribute="bottom" constant="10.5" id="sPe-lW-8et"/>
                     <constraint firstAttribute="trailing" secondItem="IbD-ax-Fuk" secondAttribute="trailing" constant="209" id="tud-E4-yXf"/>
-                    <constraint firstItem="JVH-hT-oHo" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="z4o-RD-OIj"/>
+                    <constraint firstItem="JVH-hT-oHo" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="98" id="z4o-RD-OIj"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
@@ -75,4 +75,7 @@
             <point key="canvasLocation" x="61.5" y="132"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="6_TorodeOsborneOldAle" width="500" height="1024"/>
+    </resources>
 </document>
