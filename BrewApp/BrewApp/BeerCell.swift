@@ -28,10 +28,20 @@ class BeerCell: UITableViewCell {
     
     func update(with beer: Beer) {
         nameLabel.text = beer.name
-        abvTextLabel.text = "abv: "
-        ibuTextLabel.text = "ibu: "
-        abvTextLabel.text = beer.ibu ?? "abv is not available"
-        ibuTextLabel.text = beer.ibu ?? "Is not available"
+        if let abv = beer.abv {
+            abvTextLabel.text = "abv: " + abv
+        }
+        else {
+            abvTextLabel.text = "abv is not available"
+        }
+        if let ibu = beer.ibu {
+            ibuTextLabel.text = "ibu: " + ibu
+        }
+        else {
+            ibuTextLabel.text = "ibu is not available"
+        }
+
+
     }
     
 }
