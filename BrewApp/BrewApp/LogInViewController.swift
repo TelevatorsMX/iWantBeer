@@ -1,5 +1,5 @@
 //
-//  DetailBeerViewController.swift
+//  LogInViewController.swift
 //  BrewApp
 //
 //  Created by Miguel Vicario on 10/26/18.
@@ -8,20 +8,17 @@
 
 import UIKit
 
-class DetailBeerViewController: UIViewController {
+class LogInViewController: UIViewController {
 
-    @IBOutlet weak var detailImage: UIImageView!
-    @IBOutlet weak var segmentLabel: UILabel!
-    @IBOutlet weak var colorLabel: UILabel!
-    @IBOutlet weak var alcoholLabel: UILabel!
-    @IBOutlet weak var countryLabel: UILabel!
+    @IBOutlet weak var userTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
     
-    var beer: Beer!
+    let users:[String] = ["miguelvicario","saulcastillo","ricardo","chaino"]
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        updateUI()
+
         // Do any additional setup after loading the view.
     }
 
@@ -30,15 +27,16 @@ class DetailBeerViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func updateUI() {
-        detailImage.image = beer.image
-        segmentLabel.text = beer.segment.description
-        colorLabel.text = beer.color.description
-        alcoholLabel.text = beer.alcohol
-        countryLabel.text = beer.country
+    @IBAction func logInButton(_ sender: Any) {
+        if users.contains(userTextField.text!) && passwordTextField.text == "12345"{
+            performSegue(withIdentifier: "correctLogIn", sender: nil)
+        }
+        else{
+            print("Error de LogIn")
+            return
+        }
     }
     
-
     /*
     // MARK: - Navigation
 

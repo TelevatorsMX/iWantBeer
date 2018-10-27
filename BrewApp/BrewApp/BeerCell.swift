@@ -29,7 +29,7 @@ class BeerCell: UITableViewCell {
     func update(with beer: Beer) {
         nameLabel.text = beer.name
         quantityLabel.text = beer.quantity
-        priceLabel.text = "\(beer.precio)"
+        priceLabel.text = "$\(beer.precio)"
         imageView?.image = beer.image
     }
     
