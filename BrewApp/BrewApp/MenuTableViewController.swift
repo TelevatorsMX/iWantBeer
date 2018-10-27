@@ -51,6 +51,10 @@ class MenuTableViewController: UITableViewController {
 
         return cell
     }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "showBeerDetail", sender: self)
+    }
 
     /*
     // Override to support conditional editing of the table view.
@@ -87,15 +91,15 @@ class MenuTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        guard let detailBeerViewController = segue.destination as? DetailBeerViewController, let selectIndexPath = tableView.indexPathForSelectedRow?.row else {return}
+        detailBeerViewController.beer = beers[selectIndexPath]
     }
-    */
+    
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return CGFloat(200)

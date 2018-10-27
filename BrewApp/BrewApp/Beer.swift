@@ -10,16 +10,40 @@
 import Foundation
 import UIKit
 
-enum Segment {
+enum Segment: CustomStringConvertible {
+    
     case Ale
     case Lager
+    
+    var description: String {
+        switch self {
+        case .Ale:
+            return "Ale"
+        case .Lager:
+            return "Lager"
+        }
+    }
 }
 
-enum Color {
+enum Color: CustomStringConvertible {
     case Ambar
     case Pagise
     case Café
     case Dorado
+    
+    var description: String {
+        switch self {
+        case .Ambar:
+            return "Ambar"
+        case .Pagise:
+            return "Pagise"
+        case .Café:
+            return "Café"
+        case .Dorado:
+            return "Dorado"
+        }
+    }
+    
 }
 
 struct Beer {
