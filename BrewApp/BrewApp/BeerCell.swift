@@ -11,8 +11,8 @@ import UIKit
 class BeerCell: UITableViewCell {
 
     @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var quantityLabel: UILabel!
-    @IBOutlet weak var priceLabel: UILabel!
+    @IBOutlet weak var abvTextLabel: UILabel!
+    @IBOutlet weak var ibuTextLabel: UILabel!
     @IBOutlet weak var beerImage: UIImageView!
     
     override func awakeFromNib() {
@@ -28,9 +28,10 @@ class BeerCell: UITableViewCell {
     
     func update(with beer: Beer) {
         nameLabel.text = beer.name
-        quantityLabel.text = beer.quantity
-        priceLabel.text = "$\(beer.precio)"
-        imageView?.image = beer.image
+        abvTextLabel.text = "abv: "
+        ibuTextLabel.text = "ibu: "
+        abvTextLabel.text = beer.ibu ?? "abv is not available"
+        ibuTextLabel.text = beer.ibu ?? "Is not available"
     }
     
 }
