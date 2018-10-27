@@ -42,8 +42,12 @@ class MenuTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let beer = beers[indexPath.row]
-        let cell = Bundle.main.loadNibNamed("BeerCell", owner: nil, options: nil)![0] as! BeerCell
-        cell.update(with: beer)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "brewCell", for: indexPath) as! ProductTableViewCell
+        cell.productName.text = beer.name
+        cell.productCountry.text = beer.country
+        cell.imageView?.image = beer.image
+
+        // Configure the cell...
 
         return cell
     }
